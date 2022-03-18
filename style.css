@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: hsl(210, 46%, 95%);
+    font-size: 13px;
+    font-family: 'Manrope',sans-serif;
+}
+
+p {
+    margin: 0 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cardWrapper {
+    position: relative;
+}
+
+.card {
+    background-color: white;
+    width: 25rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 10px 10px 40px lightgray;
+}
+
+.topImage img {
+    width: 100%;
+}
+
+.cardInfo {
+    padding: 2rem 2rem;
+}
+.cardTitle {
+    font-size: 1.25rem;
+    color: hsl(217, 19%, 35%);
+}
+
+.cardContent {
+    color: hsl(214, 17%, 51%);
+    font-weight: 200;
+    margin-top: 1rem;
+    line-height: 1.4;
+
+}
+
+.userInfo {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+
+.userAvatar {
+   
+    width: 3.5rem;
+   
+}
+
+.userAvatar img {
+    border-radius: 100px;
+    width: 3rem;
+    height: 3rem;
+    
+}
+
+.userNameDate {
+    display: flex;
+    flex-direction: column;
+}
+.userName {
+    color: hsl(217, 19%, 35%);
+   
+    width: 12rem;
+    font-size: 13px;
+    font-weight: 600;
+   
+    align-self: flex-end;
+}
+
+.userDate {
+    color: hsl(214, 17%, 51%);
+   
+    font-size: 13px;
+}
+
+.shareMobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    margin-left: 2rem;  
+    cursor: pointer;
+    position: relative;
+   
+}
+
+.shareOverlayImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(214, 17%, 51%);
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.share {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    margin-left: 2rem;  
+    cursor: pointer;
+    position: relative;
+   
+}
+
+.shareClick {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(214, 17%, 51%);
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    margin-left: 8rem;  
+    cursor: pointer;
+    position: absolute;
+    top:.5rem;
+    right: 4rem;
+
+   
+}
+
+
+
+.shareToolTip {
+    width: 18rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    background-color: hsl(217, 19%, 35%);
+    display: none;
+    position: absolute;
+    top: 12.5rem;
+    right: -1rem;
+    padding: .5rem .5rem;
+    justify-content: center;
+    align-items: center;
+    color:  hsl(212, 23%, 69%);
+    box-shadow: 10px 10px 40px lightgray;
+    letter-spacing: .4rem;
+}
+
+.shareToolTip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+  }
+
+.socialGroup {
+    display:flex;
+    margin-left: 1rem;
+}
+
+.social {
+    margin: 0 .5rem;
+}
+
+.shareOverlay {
+    background-color: hsl(217, 19%, 35%);
+    display: none;
+    color: hsl(212, 23%, 69%);
+    padding-top:1rem;
+    padding-bottom: 2rem;
+    padding-right: 1.75rem;
+    padding-left: 3rem;
+    position: absolute;
+    left: -2rem;
+    top:0;
+    width: 25rem;
+    letter-spacing: .5rem;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 15;
+}
+
+.attribution 
+{ margin-top: 1rem;
+    font-size: 11px; text-align: center; 
+}
+
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width: 480px) {
+    .card {
+        width: 60rem;
+        display: flex;
+        height: 24rem;
+    }
+
+    .topImage {
+        
+    }
+    .topImage img {
+        height: 100%;
+        width: auto;
+        
+    }
+
+    .cardInfo {
+        margin-left: -6rem;
+        background-color: white;
+        padding-bottom: .5rem;
+        padding-left: 4rem;
+        
+        
+    }
+
+    .cardTitle {
+        font-size: 1.75rem;
+       
+    }
+
+    .cardContent {
+        font-size: 1.2rem;
+    }
+
+    .share {
+        margin-left: 8rem;
+        display: flex;
+    }
+
+    .shareMobile {
+        display: none;
+    }
+
+    .shareOverlay {
+        display: none;
+    }
+}
+
+
